@@ -1,5 +1,7 @@
 # nftables Port Knocking How-To
 
+TL;DR: see [`nftables.conf`](./nftables.conf) & [`knock.sh`](./knock.sh).
+
 Port knocking is a technique to conceal a listening port and disallow connections to it, while keeping the possibility to open it for a remote address not known in advance. To open such port for a specific IP, packets are sent from that IP in the right order to the sequence of predefined ports.
 
 While user space tools exist to implement port knocking (see [`knockd(1)`](https://linux.die.net/man/1/knockd)), it is possible to do it completely in nftables.
